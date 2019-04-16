@@ -7,7 +7,8 @@ import numpy
 from PIL import Image
 from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
-#from lsuv_init import LSUVinit
+from lsuv_init import LSUVinit
+import os
 
 
 # Model
@@ -46,6 +47,29 @@ model.add(Activation('softmax'))
 
 opt = keras.optimizers.Adam(lr = 0.0001, decay=1e-6)
 model.compile(optimizer = opt, loss = 'categorical_crossentropy', metrics = ['accuracy'])
+
+
+all_images = []
+for filename in os.listdir("xtrain/"):
+    dir="xtrain/"+filename
+    img=Image.open(dir)
+    img=img.resize((224,224))
+    #img.show()
+    arr = numpy.array(img)
+    arr = arr.astype('float32')
+    arr /= 255
+    all_images.append(arr)
+
+imgs = numpy.array(all_images)
+
+
+model = LSUVinit(model, imgs)
+
+
+
+
+
+
 
 
 
