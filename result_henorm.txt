@@ -1,0 +1,75 @@
+(ml) cheng@cheng-Alienware-17-R4:~/Desktop/sta561$ python init.py 
+Using TensorFlow backend.
+model number2
+WARNING:tensorflow:From /home/cheng/anaconda3/envs/ml/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/cheng/anaconda3/envs/ml/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Found 14221 images belonging to 10 classes.
+Found 8196 images belonging to 10 classes.
+WARNING:tensorflow:From /home/cheng/anaconda3/envs/ml/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Epoch 1/20
+2019-04-17 00:09:13.374926: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-17 00:09:13.865470: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2904000000 Hz
+2019-04-17 00:09:13.891400: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x564489d91db0 executing computations on platform Host. Devices:
+2019-04-17 00:09:13.891431: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-17 00:09:14.890298: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-04-17 00:09:14.890921: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x564488be69f0 executing computations on platform CUDA. Devices:
+2019-04-17 00:09:14.890938: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): GeForce GTX 1080, Compute Capability 6.1
+2019-04-17 00:09:14.891292: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.771
+pciBusID: 0000:01:00.0
+totalMemory: 7.91GiB freeMemory: 7.55GiB
+2019-04-17 00:09:14.891307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-04-17 00:09:14.967174: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-17 00:09:14.967200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-04-17 00:09:14.967208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-04-17 00:09:14.967553: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7342 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-04-17 00:09:31.381795: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+444/444 [==============================] - 368s 829ms/step - loss: 1.8435 - acc: 0.3490 - val_loss: 0.8744 - val_acc: 0.7244
+Epoch 2/20
+444/444 [==============================] - 191s 431ms/step - loss: 0.7737 - acc: 0.7466 - val_loss: 0.3196 - val_acc: 0.9025
+Epoch 3/20
+444/444 [==============================] - 199s 448ms/step - loss: 0.4543 - acc: 0.8547 - val_loss: 0.2007 - val_acc: 0.9422
+Epoch 4/20
+444/444 [==============================] - 204s 460ms/step - loss: 0.3244 - acc: 0.9033 - val_loss: 0.1438 - val_acc: 0.9584
+Epoch 5/20
+444/444 [==============================] - 202s 456ms/step - loss: 0.2509 - acc: 0.9229 - val_loss: 0.1000 - val_acc: 0.9738
+Epoch 6/20
+444/444 [==============================] - 202s 455ms/step - loss: 0.2090 - acc: 0.9376 - val_loss: 0.1110 - val_acc: 0.9668
+Epoch 7/20
+444/444 [==============================] - 201s 453ms/step - loss: 0.1752 - acc: 0.9465 - val_loss: 0.0989 - val_acc: 0.9706
+Epoch 8/20
+444/444 [==============================] - 204s 459ms/step - loss: 0.1508 - acc: 0.9546 - val_loss: 0.0609 - val_acc: 0.9854
+Epoch 9/20
+444/444 [==============================] - 203s 456ms/step - loss: 0.1308 - acc: 0.9605 - val_loss: 0.0633 - val_acc: 0.9822
+Epoch 10/20
+444/444 [==============================] - 202s 454ms/step - loss: 0.1239 - acc: 0.9636 - val_loss: 0.0597 - val_acc: 0.9829
+Epoch 11/20
+444/444 [==============================] - 203s 457ms/step - loss: 0.1061 - acc: 0.9669 - val_loss: 0.0595 - val_acc: 0.9851
+Epoch 12/20
+444/444 [==============================] - 203s 458ms/step - loss: 0.0988 - acc: 0.9691 - val_loss: 0.0668 - val_acc: 0.9837
+Epoch 13/20
+444/444 [==============================] - 204s 458ms/step - loss: 0.0926 - acc: 0.9733 - val_loss: 0.0557 - val_acc: 0.9837
+Epoch 14/20
+444/444 [==============================] - 206s 464ms/step - loss: 0.0864 - acc: 0.9741 - val_loss: 0.0710 - val_acc: 0.9782
+Epoch 15/20
+444/444 [==============================] - 202s 455ms/step - loss: 0.0679 - acc: 0.9799 - val_loss: 0.0473 - val_acc: 0.9893
+Epoch 16/20
+444/444 [==============================] - 203s 458ms/step - loss: 0.0675 - acc: 0.9793 - val_loss: 0.0589 - val_acc: 0.9847
+Epoch 17/20
+444/444 [==============================] - 202s 455ms/step - loss: 0.0632 - acc: 0.9811 - val_loss: 0.0496 - val_acc: 0.9880
+Epoch 18/20
+444/444 [==============================] - 205s 461ms/step - loss: 0.0665 - acc: 0.9781 - val_loss: 0.0466 - val_acc: 0.9870
+Epoch 19/20
+444/444 [==============================] - 203s 456ms/step - loss: 0.0549 - acc: 0.9825 - val_loss: 0.0446 - val_acc: 0.9897
+Epoch 20/20
+444/444 [==============================] - 203s 456ms/step - loss: 0.0472 - acc: 0.9849 - val_loss: 0.0471 - val_acc: 0.9892
+initialization method 2
+total training time: 4209.50180531
+total training time: 210.475090265
+
